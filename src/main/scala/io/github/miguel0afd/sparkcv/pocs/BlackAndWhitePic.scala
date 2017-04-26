@@ -27,7 +27,7 @@ object BlackAndWhitePic extends App {
   //val image: IplImage = cvLoadImage(file)
 
   if (image != null) {
-    val grayImage:IplImage = cvCreateImage(cvSize(image.width, image.height), IPL_DEPTH_8U, 1)
+    val grayImage: IplImage = cvCreateImage(cvSize(image.width, image.height), IPL_DEPTH_8U, 1)
     cvCvtColor(image, grayImage, CV_BGR2GRAY)
     cvSaveImage("/tmp/output.jpg", grayImage)
     cvReleaseImage(image)
